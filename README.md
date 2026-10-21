@@ -68,6 +68,8 @@ python maine.py ИСПРАВИТЬ!
 * **Создание точки восстановления:** Выберите пункт меню «Создать резервную копию (Бэкап)». Подсистема автоматически скопирует базу данных анонимизированных журналов в изолированный каталог `backups/` под уникальным штампом даты и времени.
 * **Аварийный откат:** При случайном удалении или повреждении рабочей конфигурации выберите пункт меню «Восстановить из бэкапа». Система самостоятельно найдет последний свежий архив и вернет ИС к стабильному состоянию.
 
+Разработчик: Ван И.Л.
+
 # User Documentation for IS Operation (Variant 23)
 
 ## 1. Short Program Description
@@ -133,6 +135,8 @@ python maine.py ИСПРАВИТЬ!
 1. Select the batch file processing mode from the interactive menu.
 2. Place your input configuration file (e.g., `input.json`) into the root directory of the application.
 3. Specify the output file name for saving the results (e.g., `output.json`). Calculations will run in an automated background mode.
+
+Developer: Van I.L
 
 ### Administrative Maintenance Regulations (Backup):
 * **Creating a Restore Point:** Select the "Create Backup" menu option. The subsystem will automatically copy the anonymized log database into an isolated `backups/` directory under a unique date and timestamp.
