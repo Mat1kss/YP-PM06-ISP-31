@@ -65,7 +65,6 @@ python maine.py ИСПРАВИТЬ!
 3. Specify the output file name for saving the results (e.g., `output.json`). Calculations will run in an automated background mode.
 
 Developer: Van I.L
-
 ### Administrative Maintenance Regulations (Backup):
 * **Creating a Restore Point:** Select the "Create Backup" menu option. The subsystem will automatically copy the anonymized log database into an isolated `backups/` directory under a unique date and timestamp.
 * **Emergency Rollback:** In case of accidental data deletion or corruption of the working configuration, select "Restore from Backup". The system will automatically find the latest archive and restore the IS to a stable state.
