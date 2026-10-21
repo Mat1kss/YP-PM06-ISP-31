@@ -1,4 +1,4 @@
-# User Documentation for IS Operation (Variant 23)
+# User Documentation for IS Operation
 
 ## 1. Short Program Description
 The developed software package is a specialized console system in Python designed for automated body mass index (BMI) calculation. The application allows calculating health metrics in either interactive or batch mode based on user-entered weight and height, providing corresponding WHO medical recommendations. The program features an autonomous administration subsystem that ensures reliable serialization of anonymized anthropometric logs and implements regular backup and emergency disaster recovery algorithms.
