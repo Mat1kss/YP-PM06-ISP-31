@@ -23,7 +23,7 @@
 * **Права доступа:** Разрешение на запись файлов в целевую директорию проекта.
 
 ### Пошаговый процесс установки:
-1. Клонируйте репозиторий или скачайте три исходных файла программного кода (`bmi_func.py`, `bmi_gui.py`, `main.py`) с репозитория [literaly980/10pr_rpm](https://github.com/literaly980/10pr_rpm/tree/master).
+1. Клонируйте репозиторий или скачайте три исходных файла программного кода (`bmi_func.py`, `bmi_gui.py`, `main.py`) с репозитория.
 2. Поместите все три файла в одну общую рабочую папку на диске компьютера (рекомендуется использовать путь без русских букв и пробелов в названии, например: `C:\zadanie\`).
 3. Откройте терминал или командную строку Windows в созданной директории с файлами.
 4. Убедитесь, что интерпретатор Python доступен в системе, выполнив команду:
@@ -93,7 +93,7 @@ The developed software package is a specialized console system in Python designe
 * **Access Rights:** Permissions to write files in the target project directory.
 
 ### Step-by-Step Installation:
-1. Clone the repository or download three source code files (`bmi_func.py`, `bmi_gui.py`, `main.py`) from the repository [literaly980/10pr_rpm](https://github.com/literaly980/10pr_rpm/tree/master).
+1. Clone the repository or download three source code files (`bmi_func.py`, `bmi_gui.py`, `main.py`) from the repository.
 2. Place all three files into a single working folder on your disk (it is recommended to use paths without spaces, e.g., `C:\zadanie\`).
 3. Open a terminal or Windows Command Prompt in the created directory.
 4. Verify that the Python interpreter is available in your system by executing:
