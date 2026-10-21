@@ -38,8 +38,8 @@ zadanie/
 ├── bmi_func.py  # Функциональное ядро расчетов ИМТ, сериализации и бэкапа
 ├── bmi_gui.py   # Консольная интерактивная оболочка ввода-вывода данных
 ├── maine.py  # Главный исполнительный модуль (пусковой файл ИС)
-├── test_prog.py      # Автоматизированные unit-тесты верификации кода
-├── TZ.md             # Техническое задание (C-требования заказчика)
+├── test_prog.py  ИСПРАВИТЬ!    # Автоматизированные unit-тесты верификации кода
+├── TZ.md   ИСПРАВИТЬ!           # Техническое задание (C-требования заказчика)
 └── README.md         # Пользовательская документация (Руководство пользователя)
 ```
 
@@ -48,7 +48,7 @@ zadanie/
 ### Запуск программного комплекса:
 Для инициализации ИС выполните в терминале команду запуска главного исполнительного модуля:
 ```bash
-python ispolnitelnie.py
+python maine.py ИСПРАВИТЬ!
 ```
 
 ### Интерактивный расчет в консоли:
@@ -93,8 +93,8 @@ The developed software package is a specialized console system in Python designe
 * **Access Rights:** Permissions to write files in the target project directory.
 
 ### Step-by-Step Installation:
-1. Clone the repository or download three source code files (`ispolnitelnie.py`, `graficheskie.py`, `functionalnie.py`) from the repository [literaly980/10pr_rpm](https://github.com/literaly980/10pr_rpm/tree/master).
-2. Place all three files into a single working folder on your disk (it is recommended to use paths without spaces, e.g., `C:\praktika\`).
+1. Clone the repository or download three source code files (`bmi_func.py`, `bmi_gui.py`, `main.py`) from the repository [literaly980/10pr_rpm](https://github.com/literaly980/10pr_rpm/tree/master).
+2. Place all three files into a single working folder on your disk (it is recommended to use paths without spaces, e.g., `C:\zadanie\`).
 3. Open a terminal or Windows Command Prompt in the created directory.
 4. Verify that the Python interpreter is available in your system by executing:
    ```bash
@@ -104,12 +104,12 @@ The developed software package is a specialized console system in Python designe
 
 ## Project Structure
 ```text
-praktika/
-├── functionalnie.py  # Core functional engine for BMI calculations, serialization & backup
-├── graficheskie.py   # Console interactive UI shell for data input/output
-├── ispolnitelnie.py  # Main execution module (launch file)
-├── test_prog.py      # Automated unit tests for code verification
-├── TZ.md             # Technical Specifications (Customer C-requirements)
+zadanie/
+├── bmi_func.py  # Core functional engine for BMI calculations, serialization & backup
+├── bmi_gui.py   # Console interactive UI shell for data input/output
+├── maine.py  # Main execution module (launch file)
+├── test_prog.py  ИСПРАВИТЬ!    # Automated unit tests for code verification
+├── TZ.md   ИСПРАВИТЬ!           # Technical Specifications (Customer C-requirements)
 └── README.md         # User Documentation (User Guide)
 ```
 
@@ -118,7 +118,7 @@ praktika/
 ### Launching the Program:
 To initialize the IS, execute the main module launch command in your terminal:
 ```bash
-python ispolnitelnie.py
+python maine.py ИСПРАВИТЬ!
 ```
 
 ### Interactive Calculation via Console:
