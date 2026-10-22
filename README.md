@@ -1,3 +1,11 @@
+<p align="center">
+  <a href="README.md"><img src="https://shields.io📖_Руководство-README-blue?style=for-the-badge" alt="README"></a>
+  <a href="TO.md"><img src="https://shields.io🔧_Регламент_ТО-TO.md-orange?style=for-the-badge" alt="Регламент ТО"></a>
+  <a href="TZ.txt"><img src="https://shields.io📋_Тех_Задание-TZ.txt-green?style=for-the-badge" alt="ТЗ"></a>
+</p>
+
+---
+
 # Body Mass Index (BMI) Calculation
 
 A software package with a graphical interface for automated calculation of body mass index (BMI), maintaining an anonymized measurement log, and issuing WHO medical recommendations.
