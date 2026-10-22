@@ -1,4 +1,81 @@
-ТЕХНИЧЕСКОЕ ЗАДАНИЕ
+EN — TERMS OF REFERENCE
+
+For the development of the software package "Calculation of body mass index (BMI) with keeping an anonymized journal"
+
+
+1. project purpose
+Automation of the processes of interactive calculation of body mass index (BMI), automatic comparison of results with WHO standards, formation of medical recommendations, as well as maintaining a local anonymized measurement log with built-in backup and recovery mechanisms.
+
+2. scope
+Medical institutions, diagnostic centers, fitness clubs, sports sections, as well as personal monitoring of the physical condition and health of a person.
+
+3. definitions, terms and abbreviations
+ - IE - information system.
+ - SW - software.
+ - IR - software.
+ - GUI (Graphical User Interface) - graphical user interface.
+ - BMI (Body Mass Index) - an indicator of the correspondence of a person's mass and his growth, used to assess the degree of sufficiency of mass.
+ - Backup - a procedure for creating a backup copy of a database (log) on a local disk to protect against failures.
+ - CSV (Comma-Separated Values) - text format used to store tabular anthropometric data.
+ - UUID (Universally Unique Identifier) - a standardized unique record identifier that ensures data anonymity (name exclusion).
+
+4. References and regulatory documents
+IR shall be developed with regard to the following standards:
+ - GOST R ISO/IEC 12207-2010: Information technology. Systems and software engineering. Software lifecycle processes.
+ - GOST R 56939-2016: Development of safe software. General requirements.
+ - GOST 19.201-78: Unified system of program documentation. Terms of reference. Content and design requirements.
+
+5. Brief description of the system
+The software package provides interactive anthropometric calculations through the window form. The system preventively validates user input, calculates BMI, determines the weight category according to World Health Organization (WHO) standards, and outputs text recommendations.
+
+For long-term storage of the results, the IS uses an anonymized log in CSV format, protected by a subsystem of automated local backup and emergency rollback.
+
+6. Overview and IR interfaces
+ - System interface: A stand-alone cross-platform system that operates locally on a user's workstation.
+ - User interface: Window graphic form based on Tkinter standard library. Controls include parameter entry fields, calculation, logging and administration buttons.
+ - Hardware interface: Standard peripheral input devices (keyboard, mouse) and output devices (monitor).
+ - Programming interface: Python runtime version 3.8+ using exclusively built-in library ecosystem (tkinter, csv, shutil, os, unittest).
+ - Communication interface: Direct local access to directories and files of the current file system (network protocols are not used).
+
+7. Technical limitations on memory
+The amount of RAM consumed by the software complex during GUI initialization and in peak serialization/deserialization modes of CSV files should not exceed * * 50 MB * * (according to the basic C-requirements of the customer).
+
+8. List of operations performed
+The software package shall support the following functional scenarios:
+ - Interactive input of parameters: weight is entered in kilograms (kg), height - in centimeters (cm).
+ - Instantaneous calculation of BMI according to the formula and conclusion of the corresponding WHO category with medical recommendations in the interface.
+ - Data serialization (anonymized saving with UUID generation without fixing full name or personal IDs) to the local data/anthropometric _ journal.csv file.
+ - Creating a local backup (backup) of the log at the user's request to the data/directory under a unique name with the stamp of the current date and time.
+ - Disaster recovery of log database integrity from an existing rollback point (replacing a corrupted anthropometric _ journal.csv file with a stable copy).
+ - Export a structured text measurement report to the data/report _ results.txt file.
+
+9. Requirements for adaptation of workplaces
+The program is delivered as a set of independent linked scripts. The IR architecture is Portable and does not require special technical, system or software reconfiguration of workstations, as well as the deployment of third-party DBMSs.
+
+10. Functional and structural description
+The IS architecture is built on a modular basis and includes:
+1. Executive module (main.py): The main entry point to the system, which assembles and launches the application.
+2. graphical interface module (bmi _ gui.py): Implements rendering of window elements, processing of click events and validation of fields.
+3. functional core (bmi _ func.py): Contains isolated mathematical and system logic (BMI calculation, CSV parsing, UUID generation, shutil backup).
+
+Kernel logic proactively blocks incorrect input (negative numbers, zero values, string characters in parameter fields) and protects the system from critical freezing.
+
+11. Target user characteristics
+End operators of the system (fitness trainers, medical workers, support specialists) with a basic or average level of computer literacy, skilled in working with window OS interfaces.
+
+12. Operational limitations
+ - Do not use external relational or non-relational DBMSs that require pre-installation and administration.
+ - It is forbidden to use any third-party external libraries (dependencies) that require downloading through package managers (pip) or connecting to the Internet.
+
+13. Assumptions and dependencies
+For stable backup, logging and export of text reports, the operating system must provide the running Python interpreter process with full rights to read, create and write files inside the data/directory.
+
+14. Requirements Allocation and Development Phases
+ - Stage 1: Design of the functional mathematical core of BMI calculations, implementation of protection against incorrect input and development of the log serialization module in CSV.
+ - Stage 2: Development and layout of the graphical control interface (Tkinter), linking the GUI with kernel calculation and export methods.
+ - Stage 3: Development of security and backup regulations (backups), writing test cases and conducting final verification tests (test _ bmi _ func.py).
+
+RU — ТЕХНИЧЕСКОЕ ЗАДАНИЕ
 
 На разработку программного комплекса «Расчет индекса массы тела (ИМТ) с ведением анонимизированного журнала»
 
