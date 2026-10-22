@@ -1,3 +1,8 @@
+> ### 🗺️ НАВИГАЦИЯ ПО ДОКУМЕНТАЦИИ
+> 🇷🇺 **[Русское руководство](README.RU.md)** │ 🇬🇧 **[English User Guide](README.md)** │ 📋 **Техническое задание (TZ.txt)** │ 🔧 **[Регламент ТО (TO.md)](TO.md)**
+
+---
+
 EN — TERMS OF REFERENCE
 
 For the development of the software package "Calculation of body mass index (BMI) with keeping an anonymized journal"
