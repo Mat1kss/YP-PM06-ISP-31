@@ -1,5 +1,5 @@
-> ### 🗺️ НАВИГАЦИЯ / NAVIGATION
-> 🇷🇺 **Русское руководство** │ 🇬🇧 **[English User Guide](README.md)** │ 📋 **[Техническое задание (TZ.txt)](TZ.txt)** │ 🔧 **[Регламент ТО (TO.md)](TO.md)**
+> ### НАВИГАЦИЯ/NAVIGATION
+> 🇷🇺 **Русское руководство** │ en **[English User Guide](README.md)** │ **[Техническое задание (TZ.txt)](TZ.txt)** │ **[Регламент ТО (TO.md)](TO.md)**
 
 ---
 
