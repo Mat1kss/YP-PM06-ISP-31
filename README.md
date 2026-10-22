@@ -12,9 +12,9 @@ The developed software package is a specialized system written in Python, equipp
 The program is equipped with an administration subsystem that ensures reliable serialization of anonymized anthropometric logs in CSV format and also implements algorithms for their regular backup and disaster recovery.
 
 ### Project goals and objectives
-* **Software development:**Creating a program in Python with a graphical interface to calculate the body mass index (BMI) and automatically generate recommendations based on anthropometric data (weight in kilograms, height in centimeters).**
+* **Software development:** Creating a program in Python with a graphical interface to calculate the body mass index (BMI) and automatically generate recommendations based on anthropometric data (weight in kilograms, height in centimeters).
 * **Storage and administration system:** Developing an algorithm for anonymized logging (using unique UUIDs) to CSV files, as well as backup and recovery procedures for the data.
-* **Documentation:**Compilation of a complete set of technical and user documentation (Technical Specification, User Manual [README.md in Russian and English], and Maintenance Procedure) for storage in the GitHub repository.
+* **Documentation:** Compilation of a complete set of technical and user documentation (Technical Specification, User Manual [README.md in Russian and English], and Maintenance Procedure) for storage in the GitHub repository.
 * **Verification:** Compilation of test cases and conducting automated regression testing of key IS modules to ensure compliance with the technical specification.
 
 ### Technologies
