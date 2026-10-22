@@ -1,71 +1,105 @@
-# User Documentation for IS Operation
+# Body Mass Index (BMI) Calculation
 
-## 1. Short Program Description
-The developed software package is a specialized console system in Python designed for automated body mass index (BMI) calculation. The application allows calculating health metrics in either interactive or batch mode based on user-entered weight and height, providing corresponding WHO medical recommendations. The program features an autonomous administration subsystem that ensures reliable serialization of anonymized anthropometric logs and implements regular backup and emergency disaster recovery algorithms.
+A software package with a graphical interface for automated calculation of body mass index (BMI), maintaining an anonymized measurement log, and issuing WHO medical recommendations.
 
-## Task Requirements
-* Development of console software in Python with data input/output via file and console to calculate: "Body Mass Index (BMI) and provision of corresponding medical recommendations based on user weight and height".
-* Development of a backup and recovery algorithm for anonymized anthropometric logs.
-* Development of user documentation (Terms of Reference, User Manual [README.md in Russian and English], and technical maintenance regulations) and their commit to GitHub.
-* Creation of test cases and verification of core IS modules compliance with the project specifications.
+---
 
-## Technologies
-* **Python 3.8+** — Main programming language
-* **JSON** — Text format for parameter profiles storage and serialization
-* **Shutil & OS** — System modules for maintenance, backup, and file system operations
-* **Unittest** — Automated module unit testing framework
+## EN — User Documentation for IS Operation
 
-## 2. Installation Guide
+### 1. Brief Program Description
+The developed software package is a specialized system written in Python, equipped with a graphical user interface (GUI). The application allows you to interactively calculate health indicators based on the user‑entered weight (kg) and height (cm), providing the corresponding official WHO medical recommendations. 
 
-### System Requirements:
-* **Operating System:** Windows 10/11, macOS, or Linux distributions.
+The program is equipped with an administration subsystem that ensures reliable serialization of anonymized anthropometric logs in CSV format and also implements algorithms for their regular backup and disaster recovery.
+
+### Project goals and objectives
+* **Software development:**Creating a program in Python with a graphical interface to calculate the body mass index (BMI) and automatically generate recommendations based on anthropometric data (weight in kilograms, height in centimeters).**
+* **Storage and administration system:** Developing an algorithm for anonymized logging (using unique UUIDs) to CSV files, as well as backup and recovery procedures for the data.
+* **Documentation:**Compilation of a complete set of technical and user documentation (Technical Specification, User Manual [README.md in Russian and English], and Maintenance Procedure) for storage in the GitHub repository.
+* **Verification:** Compilation of test cases and conducting automated regression testing of key IS modules to ensure compliance with the technical specification.
+
+### Technologies
+* **Python 3.8+** — the main programming language.
+* **Tkinter** — building a graphical user interface (GUI).
+* **CSV** — a format for structured storage of anonymized measurement logs.
+* **Shutil and OS** — modules for maintenance, backup, and direct interaction with the file system.
+* **Unittest** — a framework for automated testing of module functionality.
+
+---
+
+### 2. Installation guide
+
+#### System requirements:
+* **Operating system:** Windows 10/11, macOS, or Linux distributions.
 * **Interpreter:** Python runtime environment version 3.8 or higher.
-* **Access Rights:** Permissions to write files in the target project directory.
+* **Permissions:** The operating system has permission to read and write files to the project’s target directory.
 
-### Step-by-Step Installation:
-1. Clone the repository or download three source code files (`bmi_func.py`, `bmi_gui.py`, `main.py`) from the repository.
-2. Place all three files into a single working folder on your disk (it is recommended to use paths without spaces, e.g., `C:\zadanie\`).
-3. Open a terminal or Windows Command Prompt in the created directory.
-4. Verify that the Python interpreter is available in your system by executing:
+#### Step‑by‑step installation process:
+1. Clone the repository or download the project source files:
+   ```bash
+   git clone https://github.com
+   cd bmi-calculator
+   ```
+2. Place the files in a common working folder on the computer’s disk (it is recommended to use a path without Cyrillic characters and spaces in the names, for example: `C:\bmi_project\`).
+3. Open the terminal or command line in the created directory with the files.
+4. Check the availability of the Python interpreter in the system by running the command:
    ```bash
    python --version
    ```
-   No additional third-party libraries or packages are required.
+   *No additional installation of third‑party libraries and packages is required; only built‑in modules are used.*
 
-## Project Structure
+---
+
+### Project structure
+The actual file structure of the software complex in the repository:
 ```text
-zadanie/
-├── bmi_func.py  # Core functional engine for BMI calculations, serialization & backup
-├── bmi_gui.py   # Console interactive UI shell for data input/output
-├── maine.py  # Main execution module (launch file)
-├── test_prog.py  ИСПРАВИТЬ!    # Automated unit tests for code verification
-├── TZ.md   ИСПРАВИТЬ!           # Technical Specifications (Customer C-requirements)
-└── README.md         # User Documentation (User Guide)
+bmi-calculator/
+├── data/
+│   ├── anthropometric_journal.csv     # Measurement journal (created automatically)
+│   ├── journal_backup_...csv          # Internal backup files
+│   └── report_results.txt             # Exportable text reports
+├── bmi_func.py                        # Functional core (calculations, CSV logic, backup)
+├── bmi_gui.py                         # Tkinter-based graphical user interface
+├── main.py                            # Main execution module (entry point to the system)
+├── test_bmi_func.py                   # Automated unit tests for code verification
+├── README.md                          # Bilingual user documentation (current file)
+├── TZ.md                              # Technical specification (customer requirements)
+└── maintenance_regulations.md         # IS maintenance regulations (MR)
 ```
 
-## 3. Usage Guide
+---
 
-### Launching the Program:
-To initialize the IS, execute the main module launch command in your terminal:
+### 3. User manual
+
+#### Launching the software complex:
+To initialize the IS graphical interface, run the following command in the terminal to launch the main startup module:
 ```bash
-python maine.py ИСПРАВИТЬ!
+python main.py
 ```
 
-### Interactive Calculation via Console:
-1. Launch the program and choose the interactive input mode from the menu.
-2. Enter numeric parameter values as prompted by the system:
-   * **User Weight** — in kilograms (e.g., 75.5).
-   * **User Height** — in meters (e.g., 1.78).
-3. Press Enter to instantly view the calculated BMI value and official WHO medical guidelines.
-4. Confirm data saving to record the anonymized entry into the anthropometric log file.
+#### Interactive calculation in the graphical user interface (GUI):
+1. In the program window, find the input fields for anthropometric parameters.
+2. Enter the numerical values:
+   * **User weight** — in kilograms (for example: `70`).
+   * **User height** — in centimeters (for example: `175`).
+3. Click the **“Calculate”** button — the panel will instantly display the exact BMI value, the weight status category according to the WHO classification, and personal recommendations.
+4. Click the **“Add to journal”** button to record the anonymized entry (it will be automatically assigned a UUID) in the `data/anthropometric_journal.csv` file.
+5. To create a manual recovery point, click **“Backup journal”** The copy will be saved in the `data/` folder with a date and time stamp.
+6. To export the text results, click **“Export report”**.
 
-### Batch Processing of JSON Files:
-1. Select the batch file processing mode from the interactive menu.
-2. Place your input configuration file (e.g., `input.json`) into the root directory of the application.
-3. Specify the output file name for saving the results (e.g., `output.json`). Calculations will run in an automated background mode.
+#### Restoring data from a backup:
+In case of accidental deletion, damage, or loss of the working journal:
+1. Go to the `data/` directory.
+2. Find the latest current backup file in the format `journal_backup_YYYYMMDD_HHMMSS.csv`.
+3. Rename it or copy it under the name `anthropometric_journal.csv` (replacing the damaged file).
 
-### Administrative Maintenance Regulations (Backup):
-* **Creating a Restore Point:** Select the "Create Backup" menu option. The subsystem will automatically copy the anonymized log database into an isolated `backups/` directory under a unique date and timestamp.
-* **Emergency Rollback:** In case of accidental data deletion or corruption of the working configuration, select "Restore from Backup". The system will automatically find the latest archive and restore the IS to a stable state.
+---
 
-Developer: Van I.L
+### 4. Testing
+Since the automated test file `test_bmi_func.py` is located in the project’s root directory, running comprehensive regression testing of the modules to ensure they meet the technical requirements is done using the following command:
+```bash
+python -m unittest test_bmi_func.py -v
+```
+
+---
+
+Developer: Van I. L.
