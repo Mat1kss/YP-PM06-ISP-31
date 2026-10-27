@@ -19,7 +19,7 @@ The rules set forth in this protocol apply to the software and hardware componen
 
 * **Hardware:** Personal computer (workstation) with x86-64 architecture and standard input/output devices.
 * **Software:** Operating system (Windows 10/11, macOS, or Linux), Python interpreter (version 3.8 or higher), and standard libraries (`tkinter`, `csv`, `shutil`, `os`, `unittest`).
-* **File Structure:** IS working directories (`data/`, `backups/`), executable modules (`main.py`, `bmi_gui.py`, `bmi_func.py`), and log files (`.csv`).
+* **File Structure:** IS working directories (`data/`), executable modules (`main.py`, `bmi_gui.py`, `bmi_func.py`), and log files (`.csv`).
 
 ### 1.3. Roles and Responsibilities
 
@@ -46,7 +46,7 @@ All maintenance tasks are divided into two categories: **scheduled (preventive) 
 
 | No. | Operation Name | Frequency | Maintenance Type | Step-by-step Procedure and Expected Result | Tools Used |
 | :-: | :--- | :--- | :--- | :--- | :--- |
-| **1** | Restoring the log from a backup | In case of failure / data loss | Unscheduled | 1. Open the `backups/` folder. <br>2. Locate the most recent valid `.csv` file. <br>3. Copy it to the `data/` folder, replacing the corrupted file. <br>**Expected result:** Information system functionality restored. | OS File Explorer |
+| **1** | Restoring the log from a backup | In case of failure / data loss | Unscheduled | 1. Open the `data/` folder. <br>2. Locate the most recent valid `.csv` file. <br>3. Copy it to the `data/` folder, replacing the corrupted file. <br>**Expected result:** Information system functionality restored. | OS File Explorer |
 | **2** | Resolving data entry errors (Validation) | Upon occurrence of an error | Unscheduled | 1. A warning appears if negative values ​​or zero are entered. <br>2. Verify the correctness of the input (cm/kg). <br>**Expected result:** The program does not freeze and displays an error message. | `bmi_func.py` |
 | **3** | Diagnosing software startup failure | In case of failure | Unscheduled | 1. Open the command line. <br>2. Run `python main.py` to display the error in the console. <br>3. Check the Python version (`python --version`). <br>**Expected result:** The cause of the failure is identified and resolved. | Command line, Python |
 | **4** | Restoring GUI functionality | If the interface freezes | Unscheduled | 1. Terminate the process via Task Manager. <br>2. Check for available RAM (at least 50 MB required). <br>3. Restart `main.py`. <br>**Expected result:** The interface functions as intended. | OS Task Manager |
@@ -85,7 +85,7 @@ The effectiveness of maintenance (technical support) is evaluated based on the f
 
 * **Аппаратное обеспечение:** Персональный компьютер (рабочая станция) с архитектурой x86-64, стандартные устройства ввода-вывода.
 * **Программное обеспечение:** Операционная система (Windows 10/11, macOS, Linux), интерпретатор Python версии 3.8 и выше, стандартные библиотеки (`tkinter`, `csv`, `shutil`, `os`, `unittest`).
-* **Файловая структура:** Рабочие директории ИС (`data/`, `backups/`), исполняемые модули (`main.py`, `bmi_gui.py`, `bmi_func.py`), файлы журналов (`.csv`).
+* **Файловая структура:** Рабочие директории ИС (`data/`), исполняемые модули (`main.py`, `bmi_gui.py`, `bmi_func.py`), файлы журналов (`.csv`).
 
 ### 1.3. Роли участников
 
@@ -113,7 +113,7 @@ The effectiveness of maintenance (technical support) is evaluated based on the f
 
 | № | Наименование операции | Периодичность | Вид ТО | Пошаговый алгоритм и ожидаемый результат | Используемые инструменты |
 | :-: | :--- | :--- | :--- | :--- | :--- |
-| **1** | Восстановление журнала из резервной копии | При сбое / потере данных | Внеплановое | 1. Открыть папку `backups/`. <br>2. Найти последний актуальный `.csv` файл. <br>3. Скопировать его в папку `data/`, заменив поврежденный файл. <br>**Ожидаемый результат:** работоспособность ИС восстановлена. | Проводник ОС |
+| **1** | Восстановление журнала из резервной копии | При сбое / потере данных | Внеплановое | 1. Открыть папку `data/`. <br>2. Найти последний актуальный `.csv` файл. <br>3. Скопировать его в папку `data/`, заменив поврежденный файл. <br>**Ожидаемый результат:** работоспособность ИС восстановлена. | Проводник ОС |
 | **2** | Устранение ошибок ввода данных (Валидация) | При возникновении ошибки | Внеплановое | 1. При вводе отрицательных значений или нуля появляется предупреждение. <br>2. Проверить корректность ввода (см/кг). <br>**Ожидаемый результат:** программа не зависает, выдает сообщение об ошибке. | `bmi_func.py` |
 | **3** | Диагностика отказа запуска ПО | При отказе | Внеплановое | 1. Открыть командную строку. <br>2. Запустить `python main.py` для вывода ошибки в консоль. <br>3. Проверить версию Python (`python --version`). <br>**Ожидаемый результат:** выявлена и устранена причина сбоя. | Командная строка, Python |
 | **4** | Восстановление работоспособности GUI | При зависании интерфейса | Внеплановое | 1. Завершить процесс через Диспетчер задач. <br>2. Проверить наличие свободной оперативной памяти (не более 50 МБ). <br>3. Перезапустить `main.py`. <br>**Ожидаемый результат:** интерфейс работает штатно. | Диспетчер задач ОС |
